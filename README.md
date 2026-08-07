@@ -1,27 +1,25 @@
 <div align="center">
 
 # Node-ws
-基于serverless实现的vless+trojan双协议代理,轻量，无内核。
+本分支是js实现的nezha-v1和vless+trojan+shadowsocks三协议代理,无二进制，轻量，无内核。
 
 ---
 
 Telegram交流反馈群组：https://t.me/eooceu
 
-huggingface视频教程地址：https://youtu.be/XERxg9AODeo
 </div>
 
 ## [web-hosting部署指南](https://github.com/eooce/node-ws/blob/main/web-hosting.md) （适用于所有带nodejs App功能DirectAdmin面板）
 
-* 用于node环境的玩具和容器，基于node三方ws库，vless+trojan双协议，集成哪吒探针服务(v0或v1)，可自行添加环境变量
+* 用于node环境的玩具和容器，基于node三方ws库，vless+trojan+shadowsocks三协议，集成哪吒探针v1服务，可自行添加环境变量
 
 * PaaS 平台设置的环境变量
   | 变量名        | 是否必须 | 默认值 | 备注 |
   | ------------ | ------ | ------ | ------ |
   | UUID         | 否 |5efabea4-f6d4-91fd-b8f0-17e004c89c60| 开启了哪吒v1,请修改UUID|
   | PORT         | 否 |  3000  |  监听端口                    |
-  | NEZHA_SERVER | 否 |        |哪吒v1填写形式：nz.abc.com:8008   哪吒v0填写形式：nz.abc.com|
-  | NEZHA_PORT   | 否 |        | 哪吒v1没有此变量，v0的agent端口| 
-  | NEZHA_KEY    | 否 |        | 哪吒v1的NZ_CLIENT_SECRET或v0的agent端口 |
+  | NEZHA_SERVER | 否 |        |仅支持哪吒v1，填写形式：nz.abc.com:8008|
+  | NEZHA_KEY    | 否 |        | 哪吒v1的NZ_CLIENT_SECRET |
   | NAME         | 否 |        | 节点名称前缀，例如：Glitch |
   | DOMAIN       | 是 |        | 项目分配的域名或已反代的域名，不包括https://前缀  |
   | SUB_PATH     | 否 |  sub   | 订阅路径   |
